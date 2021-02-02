@@ -1,0 +1,28 @@
+<form class="example-form" [formGroup] = "employeeForm" class="employee-form" (ngSubmit)="submitEmployeeForm()">
+  <mat-form-field class="example-full-width full-width">
+    <mat-label>Id</mat-label>
+    <input [disabled]='isDisabled' matInput placeholder="10" type="number" value="" formControlName="id">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width full-width" >
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="Ross" value="" formControlName="firstName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width full-width">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Kelly" value="" formControlName="lastName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width full-width">
+    <mat-label>Age</mat-label>
+    <input matInput placeholder="23" value="" type="number" formControlName="age">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width full-width">
+    <mat-label>Experience</mat-label>
+    <input matInput placeholder="5" type="number" value="" formControlName="experience" disabled>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" >Submit</button>
+</form>

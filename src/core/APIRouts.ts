@@ -6,4 +6,5 @@ export class APIRouts {
     public static getEmployee = environment.apiBaseUrl + "Employee/GetEmployee";
     public static deleteEmployee = environment.apiBaseUrl + "Employee/DeleteEmployee";
     public static updateEmployee = environment.apiBaseUrl + "Employee/UpdateEmployee";
+    public static sendMail = environment.apiBaseUrl + "mail/ContactListSendMail";
 }

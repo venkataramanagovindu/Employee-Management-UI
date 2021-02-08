@@ -1,28 +1,41 @@
-<form class="example-form" [formGroup] = "employeeForm" class="employee-form" (ngSubmit)="submitEmployeeForm()">
+<form class="example-form" [formGroup] = "employeeForm" class="employee-form" (ngSubmit)="sendMail()">
   <mat-form-field class="example-full-width full-width">
-    <mat-label>Id</mat-label>
-    <input [disabled]='isDisabled' matInput placeholder="10" type="number" value="" formControlName="id">
+    <mat-label>From</mat-label>
+    <input [disabled]='isDisabled' matInput placeholder="10" type="email" value="" formControlName="from">
   </mat-form-field>
 
   <mat-form-field class="example-full-width full-width" >
-    <mat-label>First Name</mat-label>
-    <input matInput placeholder="Ross" value="" formControlName="firstName">
+    <mat-label>To</mat-label>
+    <input matInput placeholder="Ross" value="" type="email" formControlName="to">
   </mat-form-field>
 
   <mat-form-field class="example-full-width full-width">
-    <mat-label>Last Name</mat-label>
-    <input matInput placeholder="Kelly" value="" formControlName="lastName">
+    <mat-label>Subject</mat-label>
+    <input matInput placeholder="Kelly" value="" formControlName="subject">
   </mat-form-field>
 
-  <mat-form-field class="example-full-width full-width">
+  <!-- <mat-form-field class="example-full-width full-width">
     <mat-label>Age</mat-label>
     <input matInput placeholder="23" value="" type="number" formControlName="age">
-  </mat-form-field>
+  </mat-form-field> -->
 
-  <mat-form-field class="example-full-width full-width">
+  <!-- <mat-form-field class="example-full-width full-width">
     <mat-label>Experience</mat-label>
     <input matInput placeholder="5" type="number" value="" formControlName="experience" disabled>
-  </mat-form-field>
+  </mat-form-field> -->
 
+  <div id="editor">This is some sample content.</div>
+  
   <button mat-raised-button color="primary" type="submit" >Submit</button>
 </form>
+<script>
+  debugger;
+  ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .then( editor => {
+                  console.log( editor );
+          } )
+          .catch( error => {
+                  console.error( error );
+          } );
+</script>
